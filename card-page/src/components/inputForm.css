@@ -1,0 +1,16 @@
+.inputForm {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+    font-size: 12px;
+    color: red;
+    /* display: none; */
+    visibility: hidden;
+}
+
+input:invalid ~ span {
+    display: block;
+    visibility: visible;
+}
