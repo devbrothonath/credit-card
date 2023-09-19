@@ -11,7 +11,7 @@ import BackCard from "./components/backCard/backCard";
 function App() {
   const [values, setValues] = useState({
     username: "jane appleseed",
-    cardNumber: "0000 0000 0000 0000",
+    cardNumber: "0000 0000 0000 00",
     month: "00",
     year: "00",
     cvc: "000",
