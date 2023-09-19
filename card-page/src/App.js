@@ -1,12 +1,10 @@
-import Rectangle from "./assets/RectangleJpeg.jpg";
+import { useState } from "react";
+import "./App.css";
+import InputForm from "./components/inputForm/inputForm.jsx";
+import FrontCard from "./components/frontCard/frontCard.jsx";
+import BackCard from "./components/backCard/backCard";
 import EllipseB from "./assets/EllipseBig.svg";
 import EllipseS from "./assets/EllipseSmall.svg";
-import { useRef, useState } from "react";
-import "./Apps.css";
-import InputForm from "./components/inputForm.jsx";
-import DInputsForm from "./components/dInputsForm.jsx";
-import FrontCard from "./components/frontCard.jsx";
-import BackCard from "./components/backCard/backCard";
 
 function App() {
   const [values, setValues] = useState({
@@ -17,7 +15,7 @@ function App() {
     cvc: "000",
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
 
   const inputs = [
     {
@@ -30,7 +28,6 @@ function App() {
       inputForm: "inputForm",
       className: "div1",
       pattern: "^[a-zA-Z].*[s.]*.{0,30}$",
-      // pattern: "^[0-9]{4}(?:[ ]?[0-9]{4}){3}$",
       required: true,
     },
     {
@@ -85,66 +82,52 @@ function App() {
     },
   ];
 
-  
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData(e.target);
     const personData = Object.fromEntries(data.entries());
-    setSubmitted(true);
-
-    // person = personData;
-    console.log(personData);
+    // can send the "personData" values across the API, contains the data input of form after clicking the "confirm" button
+    // console.log(personData);
+    // setSubmitted(true);
   };
-  // console.log(handleSubmit.e.da);
 
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  console.log(values);
-
-  // const inputValue = document.querySelector("#cardNumber");
-  // console.log(inputValue);
-
   return (
     <div className="background">
-      <div className="flexbox">
+      <div className="flex-container">
         <div className="card-images">
           <div className="frontCard">
-            <img src={EllipseB} className="ellipse-big"></img>
-            <img src={EllipseS} className="ellipse-small"></img>
-            { (
+            <img src={EllipseB} className="circle-big" alt="big-circle"></img>
+            <img
+              src={EllipseS}
+              className="circle-small"
+              alt="small-circle"
+            ></img>
+            {
               <FrontCard
                 username={values.username}
                 cardNumber={values.cardNumber}
                 month={values.month}
                 year={values.year}
-                cvc={values.cvc}
               />
-            )}
+            }
           </div>
-          <div className="backCard">{
-            <BackCard
-            cvc={values.cvc}
-            />
-          }</div>
+          <div className="backCard">
+            {<BackCard cvc={values.cvc} />}
+          </div>
         </div>
         <div className="formPage">
           <form onSubmit={handleSubmit}>
-            
             {inputs.map((input) => (
-              <InputForm
-                key={input.id}
-                {...input}
-                // value={values[input.name]}
-                onChange={onChange}
-              />
+              <InputForm key={input.id} {...input} onChange={onChange} />
             ))}
             <div className="div6">
               <button className="btn">Confirm</button>
             </div>
           </form>
-          
         </div>
       </div>
     </div>

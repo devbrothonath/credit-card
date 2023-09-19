@@ -1,93 +1,112 @@
-/* .App {
-  text-align: center;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@500;600&display=swap");
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
+:root {
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-inter: "Inter", sans-serif;
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-labelBlack: #404040;
+  --clr-warning: #ff0000;
+  --clr-placeholder: #bbb9bc;
+  --clr-btn: #220930;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .App {
-  overflow-x: hidden;
-} */
-
-#root {
+.background {
+  background: url(./assets/RectangleJpeg.jpg);
+  background-repeat: no-repeat;
   height: 100vh;
 }
 
-.form-page {
+.flex-container {
+  display: flex;
   height: 100%;
-}
-
-.rectangle {
-  height: calc(100vh - 1px);
-  width: 70vh;
-  background-color: red;
-}
-
-.gradient {
-  height: 100%;
-  width: 100%;
-  /* object-fit: contain; */
 }
 
 .frontCard {
-  height: 245px;
-  width: 445px;
-  /* background: rgb(243, 8, 27); */
-  background: url(./assets/RectangleBack.jpg);
-  position: absolute;
-  top: 12%;
-  left: 15%;
+  position: relative;
+  height: 230px;
+  width: 430px;
+  background: url(./assets/RectangleBack.png);
+  margin-top: 100px;
+  margin-left: 100px;
   border-radius: 10px;
 }
 
-.ellipse-big {
-  margin: 10px;
+.circle-big {
+  margin: 25px 15px 20px 25px;
 }
 
-.ellipse-small {
-  margin: 10px 10px 20px 10px;
+.circle-small {
+  margin: 10px 10px 30px 0px;
 }
 
 .backCard {
-  height: 255px;
-  width: 445px;
-  /* background: rgb(243, 8, 27); */
-  background: url(./assets/Group6Back.png );
-  position: absolute;
-  top: 55%;
-  left: 25%;
+  position: relative;
+  height: 240px;
+  width: 440px;
+  background: url(./assets/Group6Back.png);
+  margin-top: 50px;
+  margin-left: 150px;
   border-radius: 10px;
-  object-fit: cover;
+  background-size: 100%;
+}
+
+.formPage {
+  width: 30vw;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 5;
+}
+.div2 {
+  grid-area: 2 / 1 / 3 / 5;
+}
+.div3 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div4 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div5 {
+  grid-area: 3 / 3 / 4 / 5;
+}
+.div6 {
+  grid-area: 4 / 1 / 5 / 5;
+}
+
+.div4 label {
+  visibility: hidden;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--clr-black);
+  background: var(--clr-btn);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+button {
+  /* typography */
+  color: var(--clr-white);
+  font-family: var(--ff-inter);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  
 }

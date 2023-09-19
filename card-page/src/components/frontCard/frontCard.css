@@ -1,0 +1,31 @@
+.cardNumber {
+  color: var(--clr-white);
+  font-family: var(--ff-inter);
+  font-size: 26px;
+  letter-spacing: 4.68px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.userName {
+  position: absolute;
+  bottom: 31px;
+  left: 32px;
+  color: var(--clr-white);
+  font-family: var(--ff-roboto);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2.47px;
+  text-transform: uppercase;
+}
+
+.month-year {
+  position: absolute;
+  right: 35px;
+  color: var(--clr-white);
+  font-family: var(--ff-roboto);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3.29px;
+}

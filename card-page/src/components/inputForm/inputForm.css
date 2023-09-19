@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
-
 .inputForm {
   display: flex;
   flex-direction: column;
 }
 
 label {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ff-roboto);
   text-transform: uppercase;
-  color: #404040;
+  color: var(--clr-labelBlack);
   font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 300%;
   letter-spacing: 1.86px;
 }
@@ -20,12 +17,12 @@ input {
   padding: 15px;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.13);
-  background: #fff;
+  background: var(--clr-white);
 }
 
 input {
   /* typography */
-  font-family: Inter;
+  font-family: var(--ff-inter);
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
@@ -34,7 +31,7 @@ input {
 }
 
 input::placeholder {
-    color: #bbb9bc;
+  color: var(--clr-placeholder);
 }
 
 .div3 input {
@@ -46,16 +43,16 @@ input::placeholder {
 }
 
 span {
-  font-family: "inter", sans-serif;
+  font-family: var(--ff-inter);
   font-size: 10px;
-  color: red;
+  color: var(--clr-warning);
   visibility: hidden;
   text-transform: capitalize;
   line-height: 200%;
 }
 
 input:invalid[focused="true"] {
-    border: 1px solid red;
+  border: 1px solid var(--clr-warning);
 }
 
 input:invalid[focused="true"] ~ span {
