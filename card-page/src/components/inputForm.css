@@ -1,16 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap");
+
 .inputForm {
   display: flex;
   flex-direction: column;
 }
 
-span {
-    font-size: 12px;
-    color: red;
-    /* display: none; */
-    visibility: hidden;
+label {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  color: #404040;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 300%;
+  letter-spacing: 1.86px;
 }
 
-input:invalid ~ span {
-    display: block;
-    visibility: visible;
+input {
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  background: #fff;
+}
+
+input {
+  /* typography */
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.875px;
+}
+
+input::placeholder {
+    color: #bbb9bc;
+}
+
+.div3 input {
+  width: 10vw;
+}
+
+.div4 input {
+  width: 10vw;
+}
+
+span {
+  font-family: "inter", sans-serif;
+  font-size: 10px;
+  color: red;
+  visibility: hidden;
+  text-transform: capitalize;
+  line-height: 200%;
+}
+
+input:invalid[focused="true"] {
+    border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+  visibility: visible;
 }

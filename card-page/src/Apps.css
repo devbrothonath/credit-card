@@ -10,23 +10,36 @@
 }
 
 .frontCard {
-  height: 200px;
-  width: 400px;
-  background-color: green;
+  height: 230px;
+  width: 430px;
+  background: url(./assets/RectangleBack.png);
   margin-top: 100px;
   margin-left: 100px;
+  border-radius: 10px;
+}
+
+.ellipse-big {
+  margin: 25px 15px 20px 25px;
+}
+
+.ellipse-small {
+  margin: 10px 10px 30px 0px;
 }
 
 .backCard {
-  height: 200px;
-  width: 400px;
-  background-color: green;
+    position: relative;
+  height: 240px;
+  width: 440px;
+  background: url(./assets/Group6Back.png);
   margin-top: 50px;
   margin-left: 150px;
+  border-radius: 10px;
+  background-size: 100%;
+  /* background-size:cover; */
 }
 
 .formPage {
-  width: 40vw;
+  width: 30vw;
   align-self: center;
   margin-left: auto;
   margin-right: auto;
@@ -40,8 +53,8 @@ form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
 }
 
 .div1 {
@@ -64,5 +77,29 @@ form {
 }
 
 .div4 label {
-    visibility: hidden;
+  visibility: hidden;
+}
+
+.div3 label {
+  display: block;
+}
+
+
+
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background: #220930;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }

@@ -1,0 +1,15 @@
+.cvcTag {
+    color: #fff;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 3.29px;
+}
+
+.cvcTag {
+    position: absolute;
+    top: 51%;
+    right: 15%;
+}
